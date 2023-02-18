@@ -1,0 +1,165 @@
+{
+  "api": {
+    "apigraphqlbussnessdb": {
+      "dependsOn": [],
+      "output": {
+        "authConfig": {
+          "additionalAuthenticationProviders": [],
+          "defaultAuthentication": {
+            "apiKeyConfig": {
+              "apiKeyExpirationDate": "2024-02-14T04:42:56.518Z",
+              "apiKeyExpirationDays": 365,
+              "description": "myapikeyv130223"
+            },
+            "authenticationType": "API_KEY"
+          }
+        }
+      },
+      "providerPlugin": "awscloudformation",
+      "service": "AppSync"
+    },
+    "apirestforbusdb": {
+      "dependsOn": [
+        {
+          "attributes": [
+            "Name",
+            "Arn"
+          ],
+          "category": "function",
+          "resourceName": "ConnectToBusDb"
+        }
+      ],
+      "providerPlugin": "awscloudformation",
+      "service": "API Gateway"
+    }
+  },
+  "auth": {
+    "web1a9dbe15": {
+      "customAuth": false,
+      "dependsOn": [],
+      "providerPlugin": "awscloudformation",
+      "service": "Cognito",
+      "serviceType": "imported"
+    }
+  },
+  "function": {
+    "ConnectToBusDb": {
+      "build": true,
+      "providerPlugin": "awscloudformation",
+      "service": "Lambda"
+    }
+  },
+  "parameters": {
+    "AMPLIFY_auth_web1a9dbe15_allowUnauthenticatedIdentities": {
+      "usedBy": [
+        {
+          "category": "auth",
+          "resourceName": "web1a9dbe15"
+        }
+      ]
+    },
+    "AMPLIFY_auth_web1a9dbe15_authRoleArn": {
+      "usedBy": [
+        {
+          "category": "auth",
+          "resourceName": "web1a9dbe15"
+        }
+      ]
+    },
+    "AMPLIFY_auth_web1a9dbe15_authRoleName": {
+      "usedBy": [
+        {
+          "category": "auth",
+          "resourceName": "web1a9dbe15"
+        }
+      ]
+    },
+    "AMPLIFY_auth_web1a9dbe15_identityPoolId": {
+      "usedBy": [
+        {
+          "category": "auth",
+          "resourceName": "web1a9dbe15"
+        }
+      ]
+    },
+    "AMPLIFY_auth_web1a9dbe15_identityPoolName": {
+      "usedBy": [
+        {
+          "category": "auth",
+          "resourceName": "web1a9dbe15"
+        }
+      ]
+    },
+    "AMPLIFY_auth_web1a9dbe15_nativeClientId": {
+      "usedBy": [
+        {
+          "category": "auth",
+          "resourceName": "web1a9dbe15"
+        }
+      ]
+    },
+    "AMPLIFY_auth_web1a9dbe15_unauthRoleArn": {
+      "usedBy": [
+        {
+          "category": "auth",
+          "resourceName": "web1a9dbe15"
+        }
+      ]
+    },
+    "AMPLIFY_auth_web1a9dbe15_unauthRoleName": {
+      "usedBy": [
+        {
+          "category": "auth",
+          "resourceName": "web1a9dbe15"
+        }
+      ]
+    },
+    "AMPLIFY_auth_web1a9dbe15_userPoolId": {
+      "usedBy": [
+        {
+          "category": "auth",
+          "resourceName": "web1a9dbe15"
+        }
+      ]
+    },
+    "AMPLIFY_auth_web1a9dbe15_userPoolName": {
+      "usedBy": [
+        {
+          "category": "auth",
+          "resourceName": "web1a9dbe15"
+        }
+      ]
+    },
+    "AMPLIFY_auth_web1a9dbe15_webClientId": {
+      "usedBy": [
+        {
+          "category": "auth",
+          "resourceName": "web1a9dbe15"
+        }
+      ]
+    },
+    "AMPLIFY_function_ConnectToBusDb_deploymentBucketName": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "ConnectToBusDb"
+        }
+      ]
+    },
+    "AMPLIFY_function_ConnectToBusDb_s3Key": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "ConnectToBusDb"
+        }
+      ]
+    }
+  },
+  "storage": {
+    "teststoragevtwo": {
+      "dependsOn": [],
+      "providerPlugin": "awscloudformation",
+      "service": "S3"
+    }
+  }
+}

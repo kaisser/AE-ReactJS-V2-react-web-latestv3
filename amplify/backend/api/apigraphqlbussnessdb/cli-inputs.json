@@ -1,0 +1,15 @@
+{
+  "version": 1,
+  "serviceConfiguration": {
+    "apiName": "apigraphqlbussnessdb",
+    "serviceName": "AppSync",
+    "defaultAuthType": {
+      "mode": "API_KEY",
+      "expirationTime": 365,
+      "apiKeyExpirationDate": "2024-02-14T04:42:56.518Z",
+      "keyDescription": "myapikeyv130223"
+    },
+    "additionalAuthTypes": [],
+    "conflictResolution": {}
+  }
+}

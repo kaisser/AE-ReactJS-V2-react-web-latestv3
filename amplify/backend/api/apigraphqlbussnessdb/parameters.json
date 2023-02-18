@@ -1,0 +1,6 @@
+{
+  "AppSyncApiName": "apigraphqlbussnessdb",
+  "DynamoDBBillingMode": "PAY_PER_REQUEST",
+  "DynamoDBEnableServerSideEncryption": false,
+  "AuthModeLastUpdated": "2023-02-14T04:43:07.990Z"
+}

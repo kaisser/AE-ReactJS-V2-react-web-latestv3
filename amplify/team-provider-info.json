@@ -1,0 +1,78 @@
+{
+  "dev": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-web-dev-221803-authRole",
+      "UnauthRoleArn": "arn:aws:iam::918559970238:role/amplify-web-dev-221803-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::918559970238:role/amplify-web-dev-221803-authRole",
+      "Region": "ca-central-1",
+      "DeploymentBucketName": "amplify-web-dev-221803-deployment",
+      "UnauthRoleName": "amplify-web-dev-221803-unauthRole",
+      "StackName": "amplify-web-dev-221803",
+      "StackId": "arn:aws:cloudformation:ca-central-1:918559970238:stack/amplify-web-dev-221803/8cbaf1c0-f004-11ec-9592-06d82c1504a6",
+      "AmplifyAppId": "d5vlg2r0pykjr"
+    },
+    "categories": {
+      "auth": {
+        "web1a9dbe15": {
+          "userPoolId": "ca-central-1_KzT8i7h4Q",
+          "userPoolName": "dev-frontend-user-695d8ca",
+          "webClientId": "6vltg2c6vikd8hlsshrk17qinq",
+          "nativeClientId": "6vltg2c6vikd8hlsshrk17qinq",
+          "identityPoolId": "ca-central-1:c323fdc2-3c92-4cc8-805c-a0633ebf8730",
+          "identityPoolName": "dev-angel-earth-frontend-identity-pool",
+          "allowUnauthenticatedIdentities": true,
+          "authRoleArn": "arn:aws:iam::918559970238:role/cognito_authorise_roles-83ccad1",
+          "authRoleName": "cognito_authorise_roles-83ccad1",
+          "unauthRoleArn": "arn:aws:iam::918559970238:role/cognito_unauthenticated_roles-9f146b3",
+          "unauthRoleName": "cognito_unauthenticated_roles-9f146b3"
+        }
+      },
+      "api": {
+        "apigraphqlbussnessdb": {},
+        "apirestforbusdb": {}
+      },
+      "function": {
+        "ConnectToBusDb": {
+          "deploymentBucketName": "amplify-web-dev-221803-deployment",
+          "s3Key": "amplify-builds/ConnectToBusDb-2f593433795839315a47-build.zip"
+        }
+      },
+      "storage": {
+        "teststoragevtwo": {}
+      }
+    }
+  },
+  "aedev": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-web-aedev-211831-authRole",
+      "UnauthRoleArn": "arn:aws:iam::918559970238:role/amplify-web-aedev-211831-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::918559970238:role/amplify-web-aedev-211831-authRole",
+      "Region": "ca-central-1",
+      "DeploymentBucketName": "amplify-web-aedev-211831-deployment",
+      "UnauthRoleName": "amplify-web-aedev-211831-unauthRole",
+      "StackName": "amplify-web-aedev-211831",
+      "StackId": "arn:aws:cloudformation:ca-central-1:918559970238:stack/amplify-web-aedev-211831/918dd4c0-71a4-11ed-8fbe-0e0aefc04f50",
+      "AmplifyAppId": "d5vlg2r0pykjr"
+    },
+    "categories": {
+      "auth": {
+        "web1a9dbe15": {
+          "userPoolId": "ca-central-1_KzT8i7h4Q",
+          "userPoolName": "dev-frontend-user-695d8ca",
+          "webClientId": "6vltg2c6vikd8hlsshrk17qinq",
+          "nativeClientId": "6vltg2c6vikd8hlsshrk17qinq",
+          "identityPoolId": "ca-central-1:c323fdc2-3c92-4cc8-805c-a0633ebf8730",
+          "identityPoolName": "dev-angel-earth-frontend-identity-pool",
+          "allowUnauthenticatedIdentities": true,
+          "authRoleArn": "arn:aws:iam::918559970238:role/cognito_authorise_roles-83ccad1",
+          "authRoleName": "cognito_authorise_roles-83ccad1",
+          "unauthRoleArn": "arn:aws:iam::918559970238:role/cognito_unauthenticated_roles-9f146b3",
+          "unauthRoleName": "cognito_unauthenticated_roles-9f146b3"
+        }
+      },
+      "api": {
+        "apigraphqlbussnessdb": {}
+      }
+    }
+  }
+}

@@ -1,0 +1,282 @@
+
+type Remotedbtable {
+  id: ID!
+  dbname: String!
+  hostname: String!
+  username: String!
+  userpassword: String!
+  bussnessname: String!
+  bussnessId: String!
+  dbport: Int!
+  bussnessLocation: String!
+  bussnessAdress: String!
+  bussnessCountry: String!
+  bussnessNbLocation: Int!
+  dbtype: String!
+  createdAt: AWSDateTime!
+  updatedAt: AWSDateTime!
+}
+
+input ModelStringInput {
+  ne: String
+  eq: String
+  le: String
+  lt: String
+  ge: String
+  gt: String
+  contains: String
+  notContains: String
+  between: [String]
+  beginsWith: String
+  attributeExists: Boolean
+  attributeType: ModelAttributeTypes
+  size: ModelSizeInput
+}
+
+input ModelIntInput {
+  ne: Int
+  eq: Int
+  le: Int
+  lt: Int
+  ge: Int
+  gt: Int
+  between: [Int]
+  attributeExists: Boolean
+  attributeType: ModelAttributeTypes
+}
+
+input ModelFloatInput {
+  ne: Float
+  eq: Float
+  le: Float
+  lt: Float
+  ge: Float
+  gt: Float
+  between: [Float]
+  attributeExists: Boolean
+  attributeType: ModelAttributeTypes
+}
+
+input ModelBooleanInput {
+  ne: Boolean
+  eq: Boolean
+  attributeExists: Boolean
+  attributeType: ModelAttributeTypes
+}
+
+input ModelIDInput {
+  ne: ID
+  eq: ID
+  le: ID
+  lt: ID
+  ge: ID
+  gt: ID
+  contains: ID
+  notContains: ID
+  between: [ID]
+  beginsWith: ID
+  attributeExists: Boolean
+  attributeType: ModelAttributeTypes
+  size: ModelSizeInput
+}
+
+input ModelSubscriptionStringInput {
+  ne: String
+  eq: String
+  le: String
+  lt: String
+  ge: String
+  gt: String
+  contains: String
+  notContains: String
+  between: [String]
+  beginsWith: String
+  in: [String]
+  notIn: [String]
+}
+
+input ModelSubscriptionIntInput {
+  ne: Int
+  eq: Int
+  le: Int
+  lt: Int
+  ge: Int
+  gt: Int
+  between: [Int]
+  in: [Int]
+  notIn: [Int]
+}
+
+input ModelSubscriptionFloatInput {
+  ne: Float
+  eq: Float
+  le: Float
+  lt: Float
+  ge: Float
+  gt: Float
+  between: [Float]
+  in: [Float]
+  notIn: [Float]
+}
+
+input ModelSubscriptionBooleanInput {
+  ne: Boolean
+  eq: Boolean
+}
+
+input ModelSubscriptionIDInput {
+  ne: ID
+  eq: ID
+  le: ID
+  lt: ID
+  ge: ID
+  gt: ID
+  contains: ID
+  notContains: ID
+  between: [ID]
+  beginsWith: ID
+  in: [ID]
+  notIn: [ID]
+}
+
+enum ModelAttributeTypes {
+  binary
+  binarySet
+  bool
+  list
+  map
+  number
+  numberSet
+  string
+  stringSet
+  _null
+}
+
+input ModelSizeInput {
+  ne: Int
+  eq: Int
+  le: Int
+  lt: Int
+  ge: Int
+  gt: Int
+  between: [Int]
+}
+
+enum ModelSortDirection {
+  ASC
+  DESC
+}
+
+type ModelRemotedbtableConnection {
+  items: [Remotedbtable]!
+  nextToken: String
+}
+
+input ModelRemotedbtableFilterInput {
+  id: ModelIDInput
+  dbname: ModelStringInput
+  hostname: ModelStringInput
+  username: ModelStringInput
+  userpassword: ModelStringInput
+  bussnessname: ModelStringInput
+  bussnessId: ModelStringInput
+  dbport: ModelIntInput
+  bussnessLocation: ModelStringInput
+  bussnessAdress: ModelStringInput
+  bussnessCountry: ModelStringInput
+  bussnessNbLocation: ModelIntInput
+  dbtype: ModelStringInput
+  and: [ModelRemotedbtableFilterInput]
+  or: [ModelRemotedbtableFilterInput]
+  not: ModelRemotedbtableFilterInput
+}
+
+type Query {
+  getRemotedbtable(id: ID!): Remotedbtable
+  listRemotedbtables(filter: ModelRemotedbtableFilterInput, limit: Int, nextToken: String): ModelRemotedbtableConnection
+}
+
+input ModelRemotedbtableConditionInput {
+  dbname: ModelStringInput
+  hostname: ModelStringInput
+  username: ModelStringInput
+  userpassword: ModelStringInput
+  bussnessname: ModelStringInput
+  bussnessId: ModelStringInput
+  dbport: ModelIntInput
+  bussnessLocation: ModelStringInput
+  bussnessAdress: ModelStringInput
+  bussnessCountry: ModelStringInput
+  bussnessNbLocation: ModelIntInput
+  dbtype: ModelStringInput
+  and: [ModelRemotedbtableConditionInput]
+  or: [ModelRemotedbtableConditionInput]
+  not: ModelRemotedbtableConditionInput
+}
+
+input CreateRemotedbtableInput {
+  id: ID
+  dbname: String!
+  hostname: String!
+  username: String!
+  userpassword: String!
+  bussnessname: String!
+  bussnessId: String!
+  dbport: Int!
+  bussnessLocation: String!
+  bussnessAdress: String!
+  bussnessCountry: String!
+  bussnessNbLocation: Int!
+  dbtype: String!
+}
+
+input UpdateRemotedbtableInput {
+  id: ID!
+  dbname: String
+  hostname: String
+  username: String
+  userpassword: String
+  bussnessname: String
+  bussnessId: String
+  dbport: Int
+  bussnessLocation: String
+  bussnessAdress: String
+  bussnessCountry: String
+  bussnessNbLocation: Int
+  dbtype: String
+}
+
+input DeleteRemotedbtableInput {
+  id: ID!
+}
+
+type Mutation {
+  createRemotedbtable(input: CreateRemotedbtableInput!, condition: ModelRemotedbtableConditionInput): Remotedbtable
+  updateRemotedbtable(input: UpdateRemotedbtableInput!, condition: ModelRemotedbtableConditionInput): Remotedbtable
+  deleteRemotedbtable(input: DeleteRemotedbtableInput!, condition: ModelRemotedbtableConditionInput): Remotedbtable
+}
+
+input ModelSubscriptionRemotedbtableFilterInput {
+  id: ModelSubscriptionIDInput
+  dbname: ModelSubscriptionStringInput
+  hostname: ModelSubscriptionStringInput
+  username: ModelSubscriptionStringInput
+  userpassword: ModelSubscriptionStringInput
+  bussnessname: ModelSubscriptionStringInput
+  bussnessId: ModelSubscriptionStringInput
+  dbport: ModelSubscriptionIntInput
+  bussnessLocation: ModelSubscriptionStringInput
+  bussnessAdress: ModelSubscriptionStringInput
+  bussnessCountry: ModelSubscriptionStringInput
+  bussnessNbLocation: ModelSubscriptionIntInput
+  dbtype: ModelSubscriptionStringInput
+  and: [ModelSubscriptionRemotedbtableFilterInput]
+  or: [ModelSubscriptionRemotedbtableFilterInput]
+}
+
+type Subscription {
+  onCreateRemotedbtable(filter: ModelSubscriptionRemotedbtableFilterInput): Remotedbtable @aws_subscribe(mutations: ["createRemotedbtable"])
+  onUpdateRemotedbtable(filter: ModelSubscriptionRemotedbtableFilterInput): Remotedbtable @aws_subscribe(mutations: ["updateRemotedbtable"])
+  onDeleteRemotedbtable(filter: ModelSubscriptionRemotedbtableFilterInput): Remotedbtable @aws_subscribe(mutations: ["deleteRemotedbtable"])
+}
+

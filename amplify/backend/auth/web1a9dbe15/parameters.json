@@ -1,0 +1,21 @@
+{
+  "authSelections": "identityPoolAndUserPool",
+  "resourceName": "web1a9dbe15",
+  "serviceType": "imported",
+  "region": "ca-central-1",
+  "usernameAttributes": [
+    "phone_number",
+    "email"
+  ],
+  "authProvidersUserPool": [],
+  "requiredAttributes": [],
+  "passwordPolicyMinLength": 8,
+  "passwordPolicyCharacters": [],
+  "mfaConfiguration": "OPTIONAL",
+  "autoVerifiedAttributes": [
+    "phone_number"
+  ],
+  "mfaTypes": [
+    "SMS Text Message"
+  ]
+}

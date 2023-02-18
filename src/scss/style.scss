@@ -1,0 +1,108 @@
+// If you want to override variables do it here
+@import "variables";
+
+// Import styles
+@import "~@coreui/coreui/scss/coreui.scss";
+
+// Temp fix for reactstrap
+@import '~@coreui/coreui/scss/_dropdown-menu-right.scss';
+
+// If you want to add something do it here
+@import "custom";
+
+// ie fixes
+@import "ie-fix";
+
+.companyColour {
+    background: #{$primaryCompanyColour};
+    font-family: 'Montserrat', sans-serif;
+}
+
+.companyBackgroundLinar {
+    background: linear-gradient(to bottom, rgb(77,50,100),rgb(6,87,118));
+}
+
+.greenBackgroundLinar {
+    background: linear-gradient(rgb(2,197,255),rgb(72,177,70));
+}
+
+.companyColour:hover {
+    background-color: $hoverColour;
+    color: $tertiaryCompanyColour;
+}
+
+.companyColourSecText {
+    color: rgba(2, 197, 255, 1);
+    background: none;
+    border: hidden;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.companyColourSecButton {
+    background: $secondaryCompanyColour;
+    color: rgba(2, 197, 255, 1);
+    border: 1.5px solid rgba(2, 197, 255, 1);
+    font-family: 'Montserrat', sans-serif;
+}
+
+.commonBackground {
+    background-image: url("../assets/img/Background.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.successText {
+    background-color: $success;
+    color: $tertiaryCompanyColour;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.cardBackground {
+    background-color: "rgba(13,13,13,0.26)";
+    border-radius: 16;
+}
+
+.hiddenOverflow {
+    overflow: hidden;
+}
+
+p:hover {
+    pointer-events: none;
+}
+
+.disableHover > p {
+  pointer-events: auto;
+  opacity: 1;
+  transition: 0.3s;
+}
+
+.disableHover:hover { opacity: 0.7;}
+
+.uploadButton button {
+    background: linear-gradient(rgb(2,197,255),rgb(72,177,70));
+    color: "white";
+    font-family: 'Montserrat', sans-serif;
+}
+
+div.flag-dropdown, div.flag-dropdown:hover  {
+    background-color: transparent !important;
+}
+
+#Role {
+    background-color: $secondaryCompanyColour;
+}
+
+.react-tel-input .selected-flag:hover, .selected-flag:focus, .flag-dropdown.open, .selected-flag, .country-list {
+    background: $secondaryCompanyColour !important;
+    border-radius: inherit !important;
+}
+
+.app-footer {
+    background-color: rgb(6,87,118);
+    color: white;
+    border-top: 0;
+}
+
+h1,h2,h3,h4,h5,p,span,a,th,tr,td, input, li, .commonFont {
+    font-family: 'Montserrat', sans-serif;
+}

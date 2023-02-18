@@ -1,0 +1,6 @@
+{
+  "name": "qrcodetest",
+  "version": "0.0.0",
+  "private": true,
+  "main": "./QrCodeTest.js"
+}

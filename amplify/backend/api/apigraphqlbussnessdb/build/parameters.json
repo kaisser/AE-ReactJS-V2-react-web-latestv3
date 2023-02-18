@@ -1,0 +1,7 @@
+{
+    "AppSyncApiName": "apigraphqlbussnessdb",
+    "DynamoDBBillingMode": "PAY_PER_REQUEST",
+    "DynamoDBEnableServerSideEncryption": false,
+    "S3DeploymentBucket": "amplify-web-dev-221803-deployment",
+    "S3DeploymentRootKey": "amplify-appsync-files/a210a58d82485eeed52d1f2228ee5268eb1f0e15"
+}

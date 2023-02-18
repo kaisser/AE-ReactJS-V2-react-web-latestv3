@@ -1,0 +1,151 @@
+{
+  "providers": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-web-dev-221803-authRole",
+      "UnauthRoleArn": "arn:aws:iam::918559970238:role/amplify-web-dev-221803-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::918559970238:role/amplify-web-dev-221803-authRole",
+      "Region": "ca-central-1",
+      "DeploymentBucketName": "amplify-web-dev-221803-deployment",
+      "UnauthRoleName": "amplify-web-dev-221803-unauthRole",
+      "StackName": "amplify-web-dev-221803",
+      "StackId": "arn:aws:cloudformation:ca-central-1:918559970238:stack/amplify-web-dev-221803/8cbaf1c0-f004-11ec-9592-06d82c1504a6",
+      "AmplifyAppId": "d5vlg2r0pykjr"
+    }
+  },
+  "auth": {
+    "web1a9dbe15": {
+      "service": "Cognito",
+      "serviceType": "imported",
+      "providerPlugin": "awscloudformation",
+      "dependsOn": [],
+      "customAuth": false,
+      "output": {
+        "UserPoolId": "ca-central-1_KzT8i7h4Q",
+        "UserPoolName": "dev-frontend-user-695d8ca",
+        "AppClientID": "6vltg2c6vikd8hlsshrk17qinq",
+        "AppClientIDWeb": "6vltg2c6vikd8hlsshrk17qinq",
+        "IdentityPoolId": "ca-central-1:c323fdc2-3c92-4cc8-805c-a0633ebf8730",
+        "IdentityPoolName": "dev-angel-earth-frontend-identity-pool",
+        "CreatedSNSRole": "arn:aws:iam::918559970238:role/cognito_sns-c8170ef"
+      },
+      "frontendAuthConfig": {
+        "socialProviders": [],
+        "usernameAttributes": [
+          "PHONE_NUMBER"
+        ],
+        "signupAttributes": [],
+        "passwordProtectionSettings": {
+          "passwordPolicyMinLength": 8,
+          "passwordPolicyCharacters": []
+        },
+        "mfaConfiguration": "OPTIONAL",
+        "mfaTypes": [
+          "SMS"
+        ],
+        "verificationMechanisms": [
+          "PHONE_NUMBER"
+        ]
+      },
+      "lastPushTimeStamp": "2022-06-19T19:27:26.733Z"
+    }
+  },
+  "api": {
+    "apigraphqlbussnessdb": {
+      "service": "AppSync",
+      "providerPlugin": "awscloudformation",
+      "dependsOn": [],
+      "output": {
+        "authConfig": {
+          "defaultAuthentication": {
+            "authenticationType": "API_KEY",
+            "apiKeyConfig": {
+              "apiKeyExpirationDays": 365,
+              "apiKeyExpirationDate": "2024-02-14T04:42:56.518Z",
+              "description": "myapikeyv130223"
+            }
+          },
+          "additionalAuthenticationProviders": []
+        },
+        "GraphQLAPIIdOutput": "eizq7syezjfl3jxefyvhslkg4y",
+        "GraphQLAPIEndpointOutput": "https://427gtq2hd5acnp3dwelg76j3nq.appsync-api.ca-central-1.amazonaws.com/graphql",
+        "GraphQLAPIKeyOutput": "da2-wnevqxkk2fbdbajqi63beik5eu"
+      },
+      "providerMetadata": {
+        "s3TemplateURL": "https://s3.amazonaws.com/amplify-web-dev-221803-deployment/amplify-cfn-templates/api/cloudformation-template.json",
+        "logicalId": "apiapigraphqlbussnessdb"
+      },
+      "lastPushTimeStamp": "2023-02-14T04:46:50.903Z",
+      "lastPushDirHash": "ti6jBV2Mx/C98L3EhB/iFEpAr30="
+    },
+    "apirestforbusdb": {
+      "service": "API Gateway",
+      "providerPlugin": "awscloudformation",
+      "dependsOn": [
+        {
+          "category": "function",
+          "resourceName": "ConnectToBusDb",
+          "attributes": [
+            "Name",
+            "Arn"
+          ]
+        }
+      ],
+      "providerMetadata": {
+        "s3TemplateURL": "https://s3.amazonaws.com/amplify-web-dev-221803-deployment/amplify-cfn-templates/api/apirestforbusdb-cloudformation-template.json",
+        "logicalId": "apiapirestforbusdb"
+      },
+      "lastPushTimeStamp": "2023-02-14T04:46:48.758Z",
+      "output": {
+        "ApiName": "apirestforbusdb",
+        "RootUrl": "https://krmxfuue56.execute-api.ca-central-1.amazonaws.com/dev",
+        "ApiId": "krmxfuue56"
+      },
+      "lastPushDirHash": "UTY4pr1dlEkPsDcF9jk4OUOz7T8="
+    }
+  },
+  "function": {
+    "ConnectToBusDb": {
+      "build": true,
+      "providerPlugin": "awscloudformation",
+      "service": "Lambda",
+      "lastBuildTimeStamp": "2023-02-14T04:34:00.002Z",
+      "lastBuildType": "PROD",
+      "lastPackageTimeStamp": "2023-02-14T04:34:00.031Z",
+      "distZipFilename": "ConnectToBusDb-2f593433795839315a47-build.zip",
+      "s3Bucket": {
+        "deploymentBucketName": "amplify-web-dev-221803-deployment",
+        "s3Key": "amplify-builds/ConnectToBusDb-2f593433795839315a47-build.zip"
+      },
+      "providerMetadata": {
+        "s3TemplateURL": "https://s3.amazonaws.com/amplify-web-dev-221803-deployment/amplify-cfn-templates/function/ConnectToBusDb-cloudformation-template.json",
+        "logicalId": "functionConnectToBusDb"
+      },
+      "lastPushTimeStamp": "2023-02-14T04:46:48.764Z",
+      "output": {
+        "Region": "ca-central-1",
+        "Arn": "arn:aws:lambda:ca-central-1:918559970238:function:ConnectToBusDb-dev",
+        "Name": "ConnectToBusDb-dev",
+        "LambdaExecutionRole": "aereactjsv2weblatestv071222LambdaRole5713b4a1-dev",
+        "LambdaExecutionRoleArn": "arn:aws:iam::918559970238:role/aereactjsv2weblatestv071222LambdaRole5713b4a1-dev"
+      },
+      "lastPushDirHash": "KBrb7YXh3sPX7fQrBA1pXzXOT6g="
+    }
+  },
+  "storage": {
+    "teststoragevtwo": {
+      "service": "S3",
+      "providerPlugin": "awscloudformation",
+      "dependsOn": [],
+      "lastPushTimeStamp": "2023-02-14T04:46:48.771Z",
+      "providerMetadata": {
+        "s3TemplateURL": "https://s3.amazonaws.com/amplify-web-dev-221803-deployment/amplify-cfn-templates/storage/cloudformation-template.json",
+        "logicalId": "storageteststoragevtwo"
+      },
+      "output": {
+        "BucketName": "teststoragev2221803-dev",
+        "Region": "ca-central-1"
+      },
+      "lastPushDirHash": "3tVVaBH5TtLQsUjQ0/Msr5Fo8kw="
+    }
+  }
+}
